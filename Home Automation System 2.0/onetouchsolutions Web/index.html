@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css" media="screen"/>
+  <link rel="stylesheet" type="text/css" href="css/room.css" media="screen"/>
+  <script type="text/javascript">
+    
+    const serverAddress = "wss://ots-websocket-server.glitch.me/";;
+    const socket = new WebSocket(serverAddress);
+    
+    socket.onopen = function(){
+      console.log("I just connected to the server");
+      document.getElementById('status').innerHTML += '<b>•</b>';
+    };
+    
+    //Send data to websocket server
+    function btnupdate(id,dn,rm)
+		{
+      // var username = document.getElementById('username').value;	
+			if(document.getElementById(id).checked == true )
+			{
+        let data = {
+          from: "USER",
+		      client_name : "username",
+		      room_name : "Room 1",
+		      appliance : dn,
+		      status : "ON",
+        }
+        data = JSON.stringify(data);
+        socket.send(data);
+				console.log("send: "+data);
+        
+			}
+			else if(document.getElementById(id).checked == false)
+			{
+        let data = {
+          from: "USER",
+		      client_name : "username",
+		      room_name : "Room 1",
+		      appliance : dn,
+		      status : "OFF",
+        }
+        data = JSON.stringify(data);
+        socket.send(data);        
+				console.log("send: "+data);
+			}
+      else
+      {
+        console.log("Enter Username.");          
+      }
+		}
+    
+    //receive data from websocket server
+    socket.onmessage = function(event)
+    {
+      console.log("Received: "+event.data);
+      let data = JSON.parse(event.data);
+      var ele = data.appliance + "-room1";
+      if(data.status == 'ON')
+      {
+        // console.log(ele);
+        document.getElementById(ele).checked = true;
+      }
+      else if(data.status == 'OFF')
+      {
+        document.getElementById(ele).checked = false;
+      }
+    };
+	</script>	
+</head>
+<body>
+
+<!-- ---------------------------------------content start from here-----------------------------------  -->
+
+  <nav class="navbar navbar-expand">
+
+      <a class="sitename" href="index.php">One<br> Touch<br> Solutions</a>
+
+      <form action="/index.php" method="post">
+<!--       <button type="submit" id="admin" name="admin_panel">Admin Panel</button> -->
+<!--       <button type="submit" id="logout" name="logout">LogOut</button>			 -->
+    </form>
+  </nav>
+
+  <div class="welcome">
+    <div class="message container h-100 d-flex justify-content-center align-items-center"> 
+      <h1>Welcome</h1>
+      <h2>
+<!--         <input type="text" id="username" placeholder="Enter Your Name"> -->
+        <span id="status" style="color:green"></span>		
+      </h2>
+    </div>	
+  </div>
+
+
+
+	<div class="table_data">
+		<h1>Bedroom</h1>			
+		<table align="center">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Device Name</th>
+					<th colspan="2">Status</th>
+				</tr>
+			</thead>
+			<tbody>
+					 		<!-- <script type="text/javascript">
+			 	alert("Connection Successful");
+			 </script> -->
+		 						<tr>
+							<td> 1 </td>
+							<td> Tubelight </td>
+							<!-- <td> 1 </td> -->
+							<td> 	 
+								<input type="checkbox" id="Tubelight-room1" 
+									class = "toggle_btn"
+									onclick="btnupdate('Tubelight-room1','Tubelight','room1')">
+							</td>
+						</tr>
+												<tr>
+							<td> 2 </td>
+							<td> Bulb </td>
+							<!-- <td> 1 </td> -->
+							<td> 	 
+								<input type="checkbox" id="Bulb-room1" 
+									class = "toggle_btn"
+									onclick="btnupdate('Bulb-room1','Bulb','room1')">
+							</td>
+						</tr>
+            <tr>
+							<td> 3 </td>
+							<td> Fan </td>
+							<!-- <td> 1 </td> -->
+							<td> 	 
+								<input type="checkbox" id="Fan-room1" 
+									class = "toggle_btn"
+									onclick="btnupdate('Fan-room1','Fan','room1')">
+							</td>
+						</tr>
+            <tr>
+							<td> 4 </td>
+							<td> Socket1</td>
+							<!-- <td> 0 </td> -->
+							<td> 	 
+								<input type="checkbox" id="Socket1-room1" 
+									class = "toggle_btn"
+									onclick="btnupdate('Socket1-room1','Socket1','room1')">
+							</td>
+						</tr>													
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
