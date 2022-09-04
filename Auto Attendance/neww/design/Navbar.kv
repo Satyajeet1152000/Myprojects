@@ -1,0 +1,16 @@
+<Navbar>:
+    MDNavigationLayout:
+        ScreenManager:
+            Screen:
+                BoxLayout:
+                    orientation: 'vertical'
+                    MDToolbar:
+                        title: "NearMe Application"
+                        elevation: 10
+                        left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
+                    Widget:
+        MDNavigationDrawer:
+            id: nav_drawer
+            Button:
+                text:"ThirdWindow"
+                on_release: root.manager.current = "ThirdWindow"

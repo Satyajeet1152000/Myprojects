@@ -1,0 +1,27 @@
+<DisplayQRScreen>
+    name: 'displayQRScreen'
+    MDFloatLayout:
+        Image:
+            id: qrImage
+            source: root.qrImagePath
+            allow_streach: True
+            keep_ratio: True
+            size_hint: 1,.7
+            pos_hint: {"center_x": .5, "center_y": .6}
+
+        MDFillRoundFlatButton:
+            text: "Back"
+            font_size: 25
+            size_hint: None,None
+            pos_hint: {"center_x":0.4,"center_y":.1}
+            on_press:
+                root.backButton()
+                root.manager.transition.direction = "right"
+        MDFillRoundFlatButton:
+            text: "Next"
+            font_size: 25
+            size_hint: None,None
+            pos_hint: {"center_x":0.6,"center_y":.1}
+            on_release: 
+                root.nextButton()
+                root.manager.transition.direction = "left"
