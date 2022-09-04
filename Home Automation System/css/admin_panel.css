@@ -1,0 +1,159 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: "Rubik", sans-serif;
+}
+
+nav{
+	background: #12151e;
+}
+
+nav a{	
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 7px;
+	text-decoration: none;
+	color: white;
+	line-height: 25px;
+}
+
+nav a:hover{
+	color: #1cc6ff;
+	text-decoration: none;
+	text-shadow: 0px 0px 10px #1cc6ff;
+}
+nav form{
+	margin-left: auto;
+}
+
+nav button{
+	background: none;
+	text-align: center;
+	font-size: 20px;
+	border: 2px solid #0494c4;
+	padding: 8px 20px;
+	outline: none;
+	color: white;
+	border-radius: 15px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+nav button[name="home_page"]:hover {
+	background: #0494c4;
+	box-shadow: 0px 0px 20px 5px #0494c4;
+}
+nav button[name="logout"]:hover {
+	background: #0494c4;
+	box-shadow: 0px 0px 20px 5px #0494c4;
+}
+
+.welcome{
+	background-image: url('../resource/data-center.jpg');
+	background-size: 100% 600px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 350px;
+
+}
+
+.message{
+	width: 80%;
+	text-align: center;	
+	color: white;	
+
+}
+
+.message h1{
+	font-size: 70px;
+	text-transform: uppercase;
+	letter-spacing: 12px;
+	font-weight: bold;
+	text-shadow: 0px 0px 15px blue;
+}
+
+.admin_control{
+	position: relative;
+	width: 30%;
+}
+
+nav button[name="show_users_dtl"]:hover {
+	background: #0494c4;
+	box-shadow: 0px 0px 20px 5px #0494c4;
+}
+
+nav button[name="show_home_stats"]:hover {
+	background: #0494c4;
+	box-shadow: 0px 0px 20px 5px #0494c4;
+}
+
+#show_userdtl{
+	border: 2px #8696b0 solid;
+	background-image: url('../resource/database.jpeg');
+	background-size: 100% 700px;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 600px;
+	color: white;
+}
+
+#user_details {
+   table-layout: fixed;
+	border-collapse: collapse;
+	text-align: center;
+	font-size: 18px;
+	width: 80%;
+	/*padding: 10px;*/
+	margin-top: 30px;
+	word-wrap: break-word;
+	/*display: inline-block;*/
+}
+
+#user_details th {
+	background-color: rgba(2, 123, 163, 0.8);
+	padding: 10px;
+	text-align: center;
+}
+
+#user_details td, #user_details th {
+	border: 1px solid #ddd;
+	padding: 7px;
+}
+
+#user_details tr:nth-child(even){
+	background-color: rgba(67, 74, 84, 0.8);
+}
+
+#user_details tr:nth-child(odd){
+	background-color: rgba(67, 74, 84, 0.5);
+}
+
+#user_details tr:hover {
+	background-color: rgba(13, 148, 119, 0.5);
+}
+
+#user_details tr a[name="update"]:hover{
+	color: #61e5ff;
+}
+
+#user_details tr a[name="delete"]:hover{
+	color: red;
+}
+
+#show_userdtl button[name="reset_id"]{
+	margin-top: 30px;
+	background: #12151e;
+	font-size: 25px;
+	border: 2px solid #0494c4;
+	padding: 5px 15px;
+	outline: none;
+	color: white;
+	border-radius: 15px;
+	transition: 0.25s;
+	cursor: pointer;
+}
+
+#show_userdtl button[name="reset_id"]:hover {
+	background: #0494c4;
+	box-shadow: 0px 0px 20px 5px #0494c4;
+}
