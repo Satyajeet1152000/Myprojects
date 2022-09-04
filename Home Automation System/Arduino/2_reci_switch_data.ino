@@ -2,8 +2,8 @@
 #include <WiFi.h> 
 
 //-------------------Access point credentials-------------------------
-const char* ssid = "Vicky";
-const char* pwd = "jack18edena";
+const char* ssid = "xxxxxxxxxxxxx";
+const char* pwd = "xxxxxxxxxxxxx";
 const char* host = "https://onetouchsolutions.000webhostapp.com/database/get_status.php/";
 // const char* send_data = "dbupdate.php/";
 // const char* receive_data = "get_status.php/"
