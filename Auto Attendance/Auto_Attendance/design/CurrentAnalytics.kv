@@ -1,0 +1,42 @@
+
+<CurrentAnalytics>:
+    name: "CurrentAnalytics"
+    BoxLayout: 
+        orientation: 'vertical'    
+        Label:
+            size:0.5 * root.width, 0.1 * root.height 
+            text:"Today's Stats"
+            # pos_hint: {"top": 1}
+            size_hint: 1, 0.15
+
+        GridLayout:
+            rows: 2
+            cols: 2
+            # orientation:'horizontal'
+            id: analyticsBox
+            # size:800,900
+            # size_hint: 1, 1.5
+            # size_hint: root.height, root.width
+            # pos_hint: {"y": .5}
+        
+        BoxLayout:
+            size_hint_y: .2        
+            RelativeLayout:                
+                Button:
+                    text: "Back"
+                    size_hint: None,None
+                    size:0.5 * root.width, 0.1 * root.height
+                    pos:0 * root.width,  0 * root.height
+                    on_release: 
+                        app.root.current = "DisplayQR"
+                        root.manager.transition.direction = "right"
+            RelativeLayout:   
+                Button:
+                    text: "Close"
+                    size_hint: None,None
+                    size:0.5 * root.width, 0.1 * root.height
+                    pos:0 * root.width,  0 * root.height
+                    on_press: app.stop()
+                    # on_release: 
+                    #     app.root.current = "CurrentAnalytics"
+                    #     root.manager.transition.direction = "left"
