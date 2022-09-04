@@ -1,0 +1,307 @@
+        Date    |       Issue           |       Description   
+▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
+16/Dec/21 19:21	|  Element_Not_found	|  1st Next_button not found.
+16/Dec/21 19:21	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+16/Dec/21 19:21	|  Element_Not_found	|  Unable to locate upload button.
+16/Dec/21 19:55	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 19:55	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 19:55	|  Element_Not_found	|  Save button not found.
+16/Dec/21 19:56	|  Element_Not_found	|  Unable to locate upload button.
+16/Dec/21 19:57	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 19:57	|  Element_Not_found	|  Save button not found.
+16/Dec/21 19:57	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 19:57	|  Element_Not_found	|  Save button not found.
+16/Dec/21 19:58	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 19:58	|  Element_Not_found	|  Save button not found.
+16/Dec/21 19:58	|  Element_Not_found	|  Unable to locate upload button.
+16/Dec/21 21:08	|  File_Not_Found	|  'channel_video_data.txt' file not found.(functions.py)
+16/Dec/21 21:15	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 21:15	|  Element_Not_found	|  Save button not found.
+16/Dec/21 22:48	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 22:48	|  Element_Not_found	|  Save button not found.
+16/Dec/21 22:49	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 22:49	|  Element_Not_found	|  Save button not found.
+16/Dec/21 22:50	|  Element_Not_found	|  Can't find description textbox.
+16/Dec/21 22:50	|  Element_Not_found	|  Save button not found.
+17/Dec/21 17:14	|  Download_Error	|  Error! While downloading video. CLEAN Trailer (2022)
+17/Dec/21 17:14	|  Download_Error	|  Error! While downloading video. BEING THE RICARDOS Clip - Lucy Ricardo Pregnant (2021)
+17/Dec/21 17:14	|  Download_Error	|  Error! While downloading video. THE LOST CITY Trailer (2022) Brad Pitt, Channing Tatum, Sandra Bullock Action Movie
+17/Dec/21 17:16	|  Download_Error	|  Error! While downloading video. CLEAN Trailer (2022)
+17/Dec/21 17:16	|  Download_Error	|  Error! While downloading video. BEING THE RICARDOS Clip - Lucy Ricardo Pregnant (2021)
+17/Dec/21 17:16	|  Download_Error	|  Error! While downloading video. THE LOST CITY Trailer (2022) Brad Pitt, Channing Tatum, Sandra Bullock Action Movie
+17/Dec/21 17:22	|  Download_Error	|  Error! While downloading video. Marnik - Up & Down (Official Video)
+17/Dec/21 17:31	|  Element_Not_found	|  Can't find description textbox.
+17/Dec/21 17:31	|  Element_Not_found	|  Unable to select End_Screen.
+17/Dec/21 17:31	|  Element_Not_found	|  Save button not found.
+17/Dec/21 17:32	|  Element_Not_found	|  Can't find description textbox.
+17/Dec/21 17:32	|  Element_Not_found	|  1st Next_button not found.
+17/Dec/21 17:32	|  Upload_Error		|  Unable to locate file/Error in file type. AttributeError
+19/Dec/21 00:30	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 00:30	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 00:30	|  Element_Not_found	|  Save button not found.
+19/Dec/21 00:31	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 00:32	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 00:32	|  Element_Not_found	|  not_for_kids radio button not found.
+19/Dec/21 00:32	|  Element_Not_found	|  Show More button not found.
+19/Dec/21 00:32	|  Element_Not_found	|  Can't find tags textbox.
+19/Dec/21 00:32	|  Element_Not_found	|  End_Screen_button not found.
+19/Dec/21 00:32	|  Element_Not_found	|  Unable to select private/public
+19/Dec/21 00:32	|  Element_Not_found	|  3rd Next_button not found.
+19/Dec/21 00:32	|  Upload_Error		|  Unable to locate file/Error in file type. WebDriverException
+19/Dec/21 00:34	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 01:37	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 20:48	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 20:48	|  Element_Not_found	|  Save button not found.
+19/Dec/21 22:37	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 22:38	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 22:38	|  Element_Not_found	|  Save button not found.
+19/Dec/21 22:38	|  Element_Not_found	|  Can't find description textbox.
+19/Dec/21 22:38	|  Element_Not_found	|  1st Next_button not found.
+19/Dec/21 22:38	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+21/Dec/21 00:28	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 00:28	|  Element_Not_found	|  Save button not found.
+21/Dec/21 00:36	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 00:36	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 00:36	|  Element_Not_found	|  Save button not found.
+21/Dec/21 00:37	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 00:37	|  Element_Not_found	|  Save button not found.
+21/Dec/21 00:37	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 00:37	|  Element_Not_found	|  Save button not found.
+21/Dec/21 14:08	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 14:08	|  Element_Not_found	|  Save button not found.
+21/Dec/21 14:09	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 14:09	|  Element_Not_found	|  Save button not found.
+21/Dec/21 23:19	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 23:20	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 23:20	|  Element_Not_found	|  Can't find description textbox.
+21/Dec/21 23:20	|  Element_Not_found	|  Save button not found.
+21/Dec/21 23:20	|  Element_Not_found	|  Unable to select private/public
+21/Dec/21 23:20	|  Element_Not_found	|  3rd Next_button not found.
+21/Dec/21 23:20	|  Upload_Error		|  Unable to locate file/Error in file type. AttributeError
+23/Dec/21 18:56	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 18:56	|  Element_Not_found	|  Save button not found.
+23/Dec/21 18:57	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 18:57	|  Element_Not_found	|  Save button not found.
+23/Dec/21 18:57	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 18:57	|  Element_Not_found	|  Save button not found.
+23/Dec/21 18:58	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 18:58	|  Element_Not_found	|  Save button not found.
+23/Dec/21 21:19	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 21:19	|  Element_Not_found	|  Save button not found.
+23/Dec/21 22:58	|  Element_Not_found	|  Can't find description textbox.
+23/Dec/21 22:58	|  Element_Not_found	|  Save button not found.
+24/Dec/21 22:57	|  Element_Not_found	|  Can't find description textbox.
+24/Dec/21 22:57	|  Element_Not_found	|  Save button not found.
+24/Dec/21 22:57	|  Element_Not_found	|  Unable to select private/public
+24/Dec/21 22:57	|  Element_Not_found	|  3rd Next_button not found.
+24/Dec/21 22:57	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+25/Dec/21 13:44	|  Element_Not_found	|  Unable to locate upload button.
+25/Dec/21 19:24	|  Element_Not_found	|  Can't find description textbox.
+25/Dec/21 19:24	|  Element_Not_found	|  Save button not found.
+26/Dec/21 14:42	|  Element_Not_found	|  Can't find description textbox.
+26/Dec/21 14:42	|  Element_Not_found	|  Save button not found.
+26/Dec/21 14:43	|  Element_Not_found	|  Can't find description textbox.
+26/Dec/21 14:43	|  Element_Not_found	|  Save button not found.
+26/Dec/21 15:30	|  Download_Error	|  Error! While downloading video. Juggernaut Vs Colossus - Fight Scene  Deadpool 2 Movie CLIP 4K
+26/Dec/21 15:30	|  Download_Error	|  Error! While downloading video. Captain America Vs The Winter Soldier - Fight Scene  Captain America The Winter Soldier Movie CLIP
+26/Dec/21 16:09	|  Download_Error	|  Error! While downloading video. Juggernaut Vs Colossus - Fight Scene  Deadpool 2 Movie CLIP 4K
+26/Dec/21 16:27	|  Element_Not_found	|  Can't find description textbox.
+26/Dec/21 16:27	|  Element_Not_found	|  Unable to select End_Screen.
+26/Dec/21 16:38	|  Download_Error	|  Error! While downloading video. Godzilla vs. MUTO Let Them Fight Scene - Godzilla (2014) Movie Clip HD
+26/Dec/21 16:38	|  Download_Error	|  Error! While downloading video. Blackout Attacks The U.S. Military Base - Transformers (2007) Movie Clip HD
+26/Dec/21 16:38	|  Download_Error	|  Error! While downloading video. Warcraft - Orc Ambush - Forest Battle Scene - Movie Clip HD
+27/Dec/21 20:43	|  Element_Not_found	|  Can't find description textbox.
+27/Dec/21 20:43	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 20:51	|  Element_Not_found	|  Can't find description textbox.
+27/Dec/21 20:51	|  Element_Not_found	|  Show More button not found.
+27/Dec/21 20:51	|  Element_Not_found	|  Can't find tags textbox.
+27/Dec/21 20:51	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 20:51	|  Upload_Error		|  Unable to locate file/Error in file type. UnexpectedAlertPresentException
+27/Dec/21 20:53	|  Element_Not_found	|  Can't find description textbox.
+27/Dec/21 20:53	|  Element_Not_found	|  Can't find tags textbox.
+27/Dec/21 20:53	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 20:53	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+27/Dec/21 21:01	|  Element_Not_found	|  Can't find description textbox.
+27/Dec/21 21:01	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 21:01	|  Upload_Error		|  Unable to locate file/Error in file type. UnexpectedAlertPresentException
+27/Dec/21 21:04	|  Element_Not_found	|  Can't find description textbox.
+27/Dec/21 21:04	|  Element_Not_found	|  not_for_kids radio button not found.
+27/Dec/21 21:04	|  Element_Not_found	|  Show More button not found.
+27/Dec/21 21:04	|  Element_Not_found	|  Can't find tags textbox.
+27/Dec/21 21:04	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 21:04	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+27/Dec/21 21:20	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 21:20	|  Upload_Error		|  Unable to locate file/Error in file type. AttributeError
+27/Dec/21 21:22	|  Element_Not_found	|  1st Next_button not found.
+27/Dec/21 21:22	|  Upload_Error		|  Unable to locate file/Error in file type. AttributeError
+28/Dec/21 17:37	|  Element_Not_found	|  1st Next_button not found.
+28/Dec/21 17:37	|  Upload_Error		|  Unable to locate file/Error in file type. ProtocolError
+29/Dec/21 15:37	|  Element_Not_found	|  Save button not found.
+29/Dec/21 15:38	|  Element_Not_found	|  Save button not found.
+30/Dec/21 23:59	|  Element_Not_found	|  not_for_kids radio button not found.
+30/Dec/21 23:59	|  Element_Not_found	|  Show More button not found.
+30/Dec/21 23:59	|  Element_Not_found	|  Can't find tags textbox.
+30/Dec/21 23:59	|  Element_Not_found	|  1st Next_button not found.
+30/Dec/21 23:59	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+31/Dec/21 00:07	|  Element_Not_found	|  Save button not found.
+01/Jan/22 19:46	|  Element_Not_found	|  Save button not found.
+01/Jan/22 19:47	|  Element_Not_found	|  Save button not found.
+01/Jan/22 19:48	|  Element_Not_found	|  Save button not found.
+02/Jan/22 17:08	|  Element_Not_found	|  not_for_kids radio button not found.
+02/Jan/22 17:08	|  Element_Not_found	|  Show More button not found.
+02/Jan/22 17:08	|  Element_Not_found	|  Can't find tags textbox.
+02/Jan/22 17:08	|  Element_Not_found	|  1st Next_button not found.
+02/Jan/22 17:08	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+02/Jan/22 17:13	|  Upload_Error		|  Unable to locate file/Error in file type. WebDriverException
+02/Jan/22 17:14	|  Element_Not_found	|  Can't find title textbox.
+03/Jan/22 23:04	|  Element_Not_found	|  Unable to locate upload button.
+03/Jan/22 23:05	|  Element_Not_found	|  Save button not found.
+03/Jan/22 23:05	|  Element_Not_found	|  Unable to select private/public
+03/Jan/22 23:05	|  Element_Not_found	|  3rd Next_button not found.
+03/Jan/22 23:05	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+04/Jan/22 15:36	|  File_Not_found	|  Thumbnail file not found.
+04/Jan/22 15:36	|  Upload_Error		|  Unable to uplaod thumbnail.
+04/Jan/22 15:36	|  Element_Not_found	|  not_for_kids radio button not found.
+04/Jan/22 15:36	|  Element_Not_found	|  Show More button not found.
+04/Jan/22 15:36	|  Element_Not_found	|  Can't find tags textbox.
+04/Jan/22 15:36	|  Element_Not_found	|  1st Next_button not found.
+04/Jan/22 15:36	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+04/Jan/22 18:36	|  File_Not_found	|  Thumbnail file not found.
+04/Jan/22 18:36	|  Upload_Error		|  Unable to uplaod thumbnail.
+04/Jan/22 18:36	|  Element_Not_found	|  not_for_kids radio button not found.
+04/Jan/22 18:36	|  Element_Not_found	|  Show More button not found.
+04/Jan/22 18:36	|  Element_Not_found	|  Can't find tags textbox.
+04/Jan/22 18:36	|  Element_Not_found	|  1st Next_button not found.
+04/Jan/22 18:36	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+04/Jan/22 23:51	|  Element_Not_found	|  Unable to locate upload button.
+05/Jan/22 18:56	|  Element_Not_found	|  Save button not found.
+05/Jan/22 18:56	|  Element_Not_found	|  Unable to locate upload button.
+06/Jan/22 19:03	|  Element_Not_found	|  Save button not found.
+06/Jan/22 19:03	|  Element_Not_found	|  Unable to select private/public
+06/Jan/22 19:03	|  Element_Not_found	|  3rd Next_button not found.
+06/Jan/22 19:03	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+06/Jan/22 19:05	|  Element_Not_found	|  Save button not found.
+06/Jan/22 19:06	|  Element_Not_found	|  Save button not found.
+11/Jan/22 12:59	|  Element_Not_found	|  Save button not found.
+11/Jan/22 14:16	|  Element_Not_found	|  Unable to select private/public
+11/Jan/22 14:23	|  Element_Not_found	|  End_Screen_button not found.
+11/Jan/22 14:23	|  Element_Not_found	|  2nd Next_button not found.
+26/Jan/22 12:23	|  Element_Not_found	|  Can't find title textbox.
+26/Jan/22 12:23	|  Element_Not_found	|  Can't find title textbox.
+26/Jan/22 12:35	|  Element_Not_found	|  Can't find title textbox.
+26/Jan/22 12:35	|  Element_Not_found	|  Unable to locate upload button.
+26/Jan/22 16:15	|  Element_Not_found	|  Save button not found.
+26/Jan/22 16:15	|  Element_Not_found	|  Unable to select private/public
+26/Jan/22 16:15	|  Element_Not_found	|  3rd Next_button not found.
+26/Jan/22 16:15	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+26/Jan/22 16:29	|  Element_Not_found	|  Save button not found.
+26/Jan/22 16:30	|  Element_Not_found	|  Save button not found.
+26/Jan/22 16:31	|  Element_Not_found	|  Save button not found.
+26/Jan/22 16:32	|  Element_Not_found	|  Save button not found.
+26/Jan/22 16:32	|  Element_Not_found	|  Unable to select private/public
+26/Jan/22 16:32	|  Element_Not_found	|  3rd Next_button not found.
+26/Jan/22 16:32	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+26/Jan/22 16:33	|  Element_Not_found	|  Unable to locate upload button.
+27/Jan/22 19:43	|  Element_Not_found	|  Save button not found.
+27/Jan/22 19:44	|  Element_Not_found	|  Save button not found.
+27/Jan/22 19:51	|  Element_Not_found	|  Save button not found.
+27/Jan/22 19:51	|  Element_Not_found	|  Unable to select private/public
+27/Jan/22 19:51	|  Element_Not_found	|  3rd Next_button not found.
+27/Jan/22 19:51	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchWindowException
+27/Jan/22 20:05	|  Element_Not_found	|  Save button not found.
+27/Jan/22 20:05	|  Element_Not_found	|  Unable to select private/public
+27/Jan/22 20:05	|  Element_Not_found	|  3rd Next_button not found.
+27/Jan/22 20:05	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+27/Jan/22 20:06	|  Element_Not_found	|  Save button not found.
+27/Jan/22 20:08	|  Element_Not_found	|  Save button not found.
+27/Jan/22 20:08	|  Element_Not_found	|  Unable to select private/public
+27/Jan/22 20:08	|  Element_Not_found	|  3rd Next_button not found.
+27/Jan/22 20:08	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+27/Jan/22 20:10	|  Element_Not_found	|  not_for_kids radio button not found.
+27/Jan/22 20:10	|  Element_Not_found	|  Show More button not found.
+27/Jan/22 20:10	|  Element_Not_found	|  Can't find tags textbox.
+27/Jan/22 20:10	|  Element_Not_found	|  1st Next_button not found.
+27/Jan/22 20:10	|  Upload_Error		|  Unable to locate file/Error in file type. ProtocolError
+29/Jan/22 20:43	|  Element_Not_found	|  Save button not found.
+29/Jan/22 20:43	|  Element_Not_found	|  Unable to select private/public
+29/Jan/22 20:43	|  Element_Not_found	|  3rd Next_button not found.
+29/Jan/22 20:43	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+29/Jan/22 20:46	|  Element_Not_found	|  Save button not found.
+29/Jan/22 20:46	|  Element_Not_found	|  Unable to select private/public
+29/Jan/22 20:46	|  Element_Not_found	|  3rd Next_button not found.
+29/Jan/22 20:46	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+29/Jan/22 20:48	|  Element_Not_found	|  Save button not found.
+29/Jan/22 23:01	|  Element_Not_found	|  Save button not found.
+29/Jan/22 23:02	|  Element_Not_found	|  Save button not found.
+29/Jan/22 23:03	|  Element_Not_found	|  Save button not found.
+29/Jan/22 23:03	|  Element_Not_found	|  Unable to select private/public
+29/Jan/22 23:03	|  Element_Not_found	|  3rd Next_button not found.
+29/Jan/22 23:03	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+01/Feb/22 18:46	|  Download_Error	|  Error! While downloading video. ASKING FOR IT Trailer (2022)
+01/Feb/22 18:46	|  Download_Error	|  Error! While downloading video. My Best Friend Anne Frank  Official Trailer  Netflix
+01/Feb/22 18:46	|  Download_Error	|  Error! While downloading video. ASKING FOR IT Official Trailer (2022)
+01/Feb/22 18:46	|  Download_Error	|  Error! While downloading video. CITY SLICKERS Clips + Trailer (1991) Billy Crystal
+01/Feb/22 18:46	|  Download_Error	|  Error! While downloading video. THE TEXAS CHAINSAW MASSACRE Trailer 2 (2022) Netflix
+02/Feb/22 20:24	|  Download_Error	|  Error! While downloading video. THE OFFER Trailer (2022)
+02/Feb/22 20:24	|  Download_Error	|  Error! While downloading video. Alessandro Cattelan One Simple Question  Official Trailer  Netflix
+02/Feb/22 20:24	|  Download_Error	|  Error! While downloading video. THE OFFER Official Trailer (2022)
+02/Feb/22 20:24	|  Download_Error	|  Error! While downloading video. UNIVERSAL SOLDIER Clip - Hotel Attack (1992) Dolph Lundgren
+02/Feb/22 20:24	|  Download_Error	|  Error! While downloading video. Project Gemini Trailer (2022)
+11/Feb/22 15:15	|  Download_Error	|  Error! While downloading video. THE ADAM PROJECT Trailer (2022) Ryan Reynolds, Mark Ruffalo
+11/Feb/22 15:15	|  Download_Error	|  Error! While downloading video. Love Is Blind Season 2  Official Clip I'll Pray For You Babe  Netflix
+11/Feb/22 15:15	|  Download_Error	|  Error! While downloading video. FATHER STU Trailer (2022)
+11/Feb/22 15:15	|  Download_Error	|  Error! While downloading video. THE TOURIST Official Trailer (2022)
+11/Feb/22 15:17	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:20	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:22	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:36	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:36	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:46	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 15:47	|  Download_Error	|  Error! While downloading video. LIGHTYEAR Trailer 2 (2022)
+11/Feb/22 17:08	|  Element_Not_found	|  2nd Next_button not found.
+11/Feb/22 17:08	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+11/Feb/22 17:09	|  Element_Not_found	|  Unable to select End_Screen.
+11/Feb/22 17:09	|  Element_Not_found	|  2nd Next_button not found.
+11/Feb/22 17:09	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+11/Feb/22 17:10	|  Element_Not_found	|  2nd Next_button not found.
+11/Feb/22 17:10	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+11/Feb/22 17:10	|  Element_Not_found	|  Unable to locate upload button.
+03/Mar/22 17:38	|  Element_Not_found	|  Can't find tags textbox.
+03/Mar/22 17:38	|  Element_Not_found	|  Save button not found.
+03/Mar/22 17:38	|  Element_Not_found	|  Unable to select private/public
+03/Mar/22 17:38	|  Element_Not_found	|  3rd Next_button not found.
+03/Mar/22 17:38	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+04/Mar/22 23:08	|  Download_Error	|  Error! While downloading video. THE BUBBLE Trailer (2022) Karen Gillan, Pedro Pascal
+04/Mar/22 23:08	|  Download_Error	|  Error! While downloading video. THE MATBAN Official Trailer (2022)
+04/Mar/22 23:08	|  Download_Error	|  Error! While downloading video. GLADIATOR Clip - I Am Maximus (2000) Russell Crowe
+04/Mar/22 23:08	|  Download_Error	|  Error! While downloading video. THE LAST BUS Trailer (2022)
+04/Mar/22 23:13	|  Download_Error	|  Error! While downloading video. THE BUBBLE Trailer (2022) Karen Gillan, Pedro Pascal
+04/Mar/22 23:13	|  Download_Error	|  Error! While downloading video. THE MATBAN Official Trailer (2022)
+04/Mar/22 23:13	|  Download_Error	|  Error! While downloading video. GLADIATOR Clip - I Am Maximus (2000) Russell Crowe
+05/Mar/22 22:47	|  Element_Not_found	|  Can't find tags textbox.
+05/Mar/22 22:47	|  Element_Not_found	|  Save button not found.
+05/Mar/22 22:47	|  Element_Not_found	|  Unable to select private/public
+05/Mar/22 22:47	|  Element_Not_found	|  3rd Next_button not found.
+05/Mar/22 22:47	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+05/Mar/22 22:48	|  Element_Not_found	|  Can't find tags textbox.
+05/Mar/22 22:52	|  Element_Not_found	|  Can't find tags textbox.
+05/Mar/22 22:56	|  Element_Not_found	|  Can't find title textbox.
+05/Mar/22 22:56	|  Element_Not_found	|  Can't find title textbox.
+05/Mar/22 23:00	|  Element_Not_found	|  Can't find description textbox.
+05/Mar/22 23:00	|  Element_Not_found	|  not_for_kids radio button not found.
+05/Mar/22 23:00	|  Element_Not_found	|  Show More button not found.
+05/Mar/22 23:00	|  Element_Not_found	|  Can't find tags textbox.
+05/Mar/22 23:00	|  Element_Not_found	|  1st Next_button not found.
+05/Mar/22 23:00	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+05/Mar/22 23:00	|  Element_Not_found	|  Can't find title textbox.
+05/Mar/22 23:00	|  Element_Not_found	|  2nd Next_button not found.
+05/Mar/22 23:00	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+07/Mar/22 20:29	|  Download_Error	|  Error! While downloading video. BATMAN DC LEAGUE OF SUPER PETS Official Trailer (2022)
+07/Mar/22 20:32	|  Element_Not_found	|  Save button not found.
+07/Mar/22 20:32	|  Element_Not_found	|  Unable to select private/public
+07/Mar/22 20:32	|  Element_Not_found	|  3rd Next_button not found.
+07/Mar/22 20:32	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+07/Mar/22 20:35	|  Element_Not_found	|  Unable to select End_Screen.
+07/Mar/22 20:35	|  Element_Not_found	|  2nd Next_button not found.
+07/Mar/22 20:35	|  Upload_Error		|  Unable to locate file/Error in file type. NoSuchElementException
+20/Mar/22 16:14	|  Element_Not_found	|  Save button not found.
