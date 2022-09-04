@@ -1,0 +1,37 @@
+<DisplayQR>:
+    name: "DisplayQR"
+    qrLabel: qrLabel
+    BoxLayout:
+        orientation:'vertical'
+        Label:
+            id: qrLabel
+            text:'0'
+        
+        Image:
+            id: qrImage
+            source: root.qrImagePath
+            allow_streach: True
+            keep_ratio: True
+            width: 200
+            height: 200
+
+        BoxLayout:
+            orientation:'horizontal'
+            RelativeLayout:                
+                Button:
+                    text: "Back"
+                    size_hint: None,None
+                    size:0.5 * root.width, 0.1 * root.height
+                    pos:0 * root.width,  0 * root.height
+                    on_release: 
+                        root.backButton()
+                        root.manager.transition.direction = "right"
+            RelativeLayout:   
+                Button:
+                    text: "Next"
+                    size_hint: None,None
+                    size:0.5 * root.width, 0.1 * root.height
+                    pos:0 * root.width,  0 * root.height
+                    on_release: 
+                        app.root.current = "CurrentAnalytics"
+                        root.manager.transition.direction = "left"

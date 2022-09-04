@@ -1,0 +1,18 @@
+#:kivy 2.1.0
+#:include design/Login.kv
+#:include design/DeptSelection.kv
+#:include design/DisplayQR.kv
+#:include design/CurrentAnalytics.kv
+
+WindowManager:
+    id: screen_manager
+    # deptSelection: deptSelection
+    # displayQR: displayQR
+    Login:
+        id: login
+    DeptSelection:
+        id: deptSelection
+    DisplayQR:
+        id: displayQR
+    CurrentAnalytics:
+        id: currentAnalytics
