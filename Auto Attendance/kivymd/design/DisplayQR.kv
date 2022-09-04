@@ -1,0 +1,37 @@
+<DisplayQR>:
+    name: "DisplayQR"
+    id: displayQR
+    # qrLabel: qrLabel
+    MDFloatLayout:
+        # Label:
+        #     id: qrLabel
+        #     text:'0'
+        
+        Image:
+            id: qrImage
+            source: root.qrImagePath
+            allow_streach: True
+            keep_ratio: True
+            size_hint: 1,.7
+            pos_hint: {"center_x": .5, "center_y": .6}
+            # width: 200
+            # height: 200
+
+
+        MDFillRoundFlatButton:
+            text: "Back"
+            font_size: 25
+            size_hint: None,None
+            pos_hint: {"center_x":0.4,"center_y":.1}
+            on_press:
+                root.backButton()
+                root.manager.transition.direction = "right"
+        MDFillRoundFlatButton:
+            text: "Next"
+            font_size: 25
+            size_hint: None,None
+            pos_hint: {"center_x":0.6,"center_y":.1}
+            # on_release: 
+                #     app.root.current = "CurrentAnalytics"
+                #     root.manager.transition.direction = "left"
+

@@ -1,0 +1,58 @@
+<DeptSelection>:
+    name: "DeptSelection"
+    id : DeptSelection
+
+    MDBoxLayout:
+        orientation: 'vertical'        
+        MDFloatLayout:
+            MDLabel:
+                text: "Semester"
+                font_size: 35
+                bold: True
+                # size_hint: 1,.1
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y":.9} 
+                
+            MDGridLayout:
+                id: displaySemButton
+                rows: 2
+                cols: 8
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y": .7}
+                # size_hint: .8,.2
+                # size: self.size
+                spacing: '10dp'
+    
+            Label:
+                text: "Subject"
+                font_size: 35
+                bold: True
+                # size_hint: 1,.1
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y":.5} 
+                
+
+            MDGridLayout:
+                id: displaySubButton
+                rows: 2
+                cols: 6
+                adaptive_size: True
+                pos_hint: {"center_x": .5, "center_y": .33}
+                spacing: '10dp'
+                Label:
+                    text:'Please select Semester'
+                    font_size: 18
+                    color: 1,0,0,1
+                    pos_hint: {"center_x": .55, "center_y":.25} 
+                    size_hint: 1,.1
+            
+            MDFillRoundFlatButton:
+                text: "Next"
+                font_size: 25
+                size_hint: None,None
+                pos_hint: {"center_x":0.5,"center_y":.1}
+                on_press:
+                    root.validate()
+                    # app.root.current = "DisplayQR"
+                    root.manager.transition.direction = "left"
+

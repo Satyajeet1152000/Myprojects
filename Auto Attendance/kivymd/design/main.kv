@@ -1,0 +1,64 @@
+#: include design/DeptSelection.kv
+#: include design/DisplayQR.kv
+#: include design/Navbar.kv
+
+
+
+Screen:
+    name: "MainScreen"
+    MDBoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+            title: "Toppp"
+            left_action_items:[["menu", lambda x: nav_drawer.set_state('toggle')]]
+            elevation: 10
+            size_hint: 1, .1
+
+            # left_action_items: [['menu', lambda x: nav_drawer.set_state("open")]]
+        ScreenManager:
+            id: screen_manager
+            # Login:
+            DeptSelection:
+            DisplayQR:
+            # CurrentAnalytics:
+            #     id: currentAnalytics
+    MDNavigationDrawer:
+        id: nav_drawer
+        size_hint:.4,1
+        ContentNavigationDrawer:
+            id: content_drawer
+        # MDBoxLayout:
+        #     orientation: 'vertical'
+        #     MDCard:
+        #         size_hint: None,None
+        #         size: 100,100
+        #         radius: [100]
+        #         md_bg_color: 1,0,0,1
+        #         # pos_hint:{"center_x":.5, "center_y": }
+        #         FitImage:
+        #             id: UserImage
+        #             source: "D:/Programs/python/Android/Auto_Attendance/qr/00.png"
+        #             allow_streach: True
+        #             keep_ratio: True
+        #             # size_hint: None,None
+        #             # size: 100,100
+        #             # pos_hint: {"center_x": .5, "center_y": .5}
+        #             radius: [100]
+
+        #     MDLabel:
+        #         text: "Satyajeet Singh"
+        #         font_size: 25
+        #         bold: True
+        #         # size_hint: .7,.1
+        #         # pos_hint:{"center_x":.5, "center_y":.74}
+
+        #     MDLabel:
+        #         text: "satyajeet1152000@gmail.com"
+        #         font_size: 18
+        #         # size_hint: .99,.1
+        #         # pos_hint:{"center_x":.5, "center_y":.68}
+        #     Button:
+        #         text:"Deptselction"
+        #         # pos_hint:{"center_x":.5, "center_y":.5}
+        #         # size_hint: .3,.1
+        #         on_press: root.ids.screen_manager.current = "DeptSelection"
