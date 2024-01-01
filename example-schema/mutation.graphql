@@ -1,0 +1,984 @@
+directive @isAuthenticated on FIELD_DEFINITION
+directive @rateLimit(
+  max: Int
+  window: String
+  message: String
+  identityArgs: [String]
+  arrayLengthField: String
+) on FIELD_DEFINITION
+directive @hasRole(roles: [String]) on FIELD_DEFINITION
+type Query {
+  # FIREBASE AUTH
+  verifyAccount: VerifyAccountResponse
+  # CUSTOM AUTH
+  refreshToken(data: RefreshTokenInput!): RefreshTokenRes
+  getCurrentUser: User
+  getCollection(id: ID!): GetCollectionResponse
+  listRecommended(category: RecommendedCategry): RecommandedResponse
+  countries(filter: CountriesFilter): CountriesResponse
+  languages(filter: LanguagesFilter): LanguagesResponse
+  listMovieCredits(id: ID!, filter: ListCreditMovieFilter): getCastCrewResponse!
+  listTvCredits(id: ID!): getCastCrewResponse!
+  listPersonMovieCredits(id: ID!,filter: ListCreditMovieFilter): getPersonMovieResponse
+  getFavoriteMovies: [Favorite]
+  getFavoriteTv: [Favorite]
+  listGenre: [genreData]
+  listMovies(filter: ListMoviesFilter,sort: ListMoviesSort): MovieSuccessResponseList
+  movies(filter: MoviesFilter!, sort: ListMoviesSort!): MoviesResponseList
+  movie(id: ID!): MovieResponse
+  getMoviesSignedPutUrl(data: MoviesSignedPutUrlDataInput!): SignedUrlType!
+  listPersons(filter: ListPersonsFilter!,sort: ListPersonsSort!): PersonsResponseList
+  person(id: ID!): PersonResponse
+  listProductionCompanies: ListProductionCompanyResponse
+  getMovieRatings: [Rating]
+  getTvRatings: [Rating]
+  listTvs(filter: ListTvsFilter!, sort: ListTvsSort!): TvsResponseList
+  tvSeriesDetails(id: ID!): Tv
+  seasons(id: ID!): Tv
+  tvSeasonDetails(id: ID!, seasonNumber: Int): Season
+  getWatchListMovies: [WatchList]
+  getWatchListTv: [WatchList]
+}
+
+type Mutation {
+  # FIREBASE AUTH
+  forgetPassword(email: String!): UpdateAccountResponse
+  updatePassword: UpdateAccountResponse
+  logout: CommonMessageResponse
+  # CUSTOM AUTH
+  sendLoginOtp(email: String!): SendLoginOtpResponse
+  verifyLoginOtp(data: VerifyLoginOtpInput!): VerifyLoginOtpResponse
+  emailPasswordSignUp(data: EmailPasswordSignUpData!): EmailPasswordSignUpResponse
+  emailPasswordLogIn(data: EmailPasswordLogInData!): EmailPasswordLogInResponse
+  emailPasswordForgotPassword(data: EmailPasswordForgotPasswordData!):   
+  emailPasswordVerifyResetToken(data: EmailPasswordVerifyResetTokenData!): EmailPasswordVerifyResetTokenResponse
+  emailPasswordResetPassword(data: EmailPasswordResetPasswordData!): CommonMessageResponse
+  updateCurrentUser(data: UpdateCurrentUserInput!): UpdateCurrentUserResponse
+  createCollection(data: collectionInputData!): CreateCollectionResponse
+  updateCollection(id: ID! data: collectionDataToUpdate): UpdateDeleteCollectionResponse
+  deleteCollection(id: ID!): UpdateDeleteCollectionResponse
+
+  createEpisode(seasonId: ID!,data: CreateEpisodeInput!): CreateTvEpisodeResponse, data: CreateEpisodeInput!): CreateTvEpisodeResponse
+  
+  updateEpisode(episodeId: ID!, data: UpdteEpisodeInput!): UpdateTvEpisodeResponse
+
+  deleteEpisode(episodeId: ID!): DeleteEpisodeResponse
+  createFavoriteMovie(data: favoriteMovieInput!): favoriteMovieResponse!
+  deleteFavoriteMovie(id: ID!): deleteFavoriteMovieResponse!
+  createGenre(name: String!): CreateUpdateGenreResponse
+  updateGenre(id: ID!, name: String): CreateUpdateGenreResponse
+  deleteGenre(id: ID!): CreateUpdateGenreResponse
+  createMovie(data: MovieInput): MovieSuccessResponse
+  updateMovie(id: ID!, data: UpdateMovieInput): MovieSuccessResponse
+  deleteMovie(id: ID!): MovieSuccessResponse
+  createPerson(data: PersonInput!): CreatePersonResponse
+  updatePerson(id: ID!, data: UpdatePersonInput!): CreatePersonResponse
+  deletePerson(id: ID!): deletePersonResponse
+  createProductionCompany(
+    data: ProductionCompanyInput!
+  ): ProductionCompanyResponse
+  updateProductionCompany(
+    id: ID!
+    data: DataToUpdate!
+  ): ProductionCompanyResponse
+  deleteProductionCompany(id: ID!): ProductionCompanyResponse
+  createMovieRating(data: MovieRatingInput!): movieRatingResponse!
+  deleteMovieRating(id: ID!): deleteMovieRatingResponse!
+  createTvSeason(tvId: ID!, data: CreateSeasonInput!): CreateTvSeasonResponse
+  updateTvSeason(seasonId: ID!, data: UpdteSeasonInput!): UpdateTvSeasonResponse
+  deleteTvSeason(seasonId: ID!): DeleteSeasonResponse
+  createTvSeries(data: TvInput!): CreateTvResponse
+  updateTvSeries(id: ID!, data: TvUpdateInput!): CreateTvResponse
+  deleteTvSeries(id: ID!): DeleteTvResponse
+  createWatchListMovie(data: watchListMovieInput!): watchListMovieResponse!
+  deleteWatchListMovie(id: ID!): deleteWatchListMovieResponse!
+}
+input UpdateCurrentUserInput {
+  email: String
+  profileImage: String
+  name: String
+  firstName: String
+  lastName: String
+}
+type UpdateCurrentUserResponse {
+  message: String
+  data: User
+}
+type User {
+  id: ID
+  email: String
+  profileImage: String
+  name: String
+  firstName: String
+  lastName: String
+}
+type VerifyAccountResponse {
+  token: String
+}
+type UpdateAccountResponse {
+  link: String
+  message: String
+}
+type SendLoginOtpResponseData {
+  otp: Int
+}
+type SendLoginOtpResponse {
+  data: SendLoginOtpResponseData
+  message: String
+}
+type EmailPasswordForgotPasswordResponseData {
+  token: String
+}
+type EmailPasswordForgotPasswordResponse {
+  data: EmailPasswordForgotPasswordResponseData
+  message: String
+}
+type EmailPasswordVerifyResetTokenResponseData {
+  isValidToken: Boolean
+}
+type EmailPasswordVerifyResetTokenResponse {
+  data: EmailPasswordVerifyResetTokenResponseData
+  message: String
+}
+input VerifyLoginOtpInput {
+  email: String!
+  otp: Int!
+}
+type VerifyLoginOtpData {
+  token: String
+  refreshToken: String
+  user: User
+}
+type VerifyLoginOtpResponse {
+  message: String
+  data: VerifyLoginOtpData
+}
+input EmailPasswordSignUpData {
+  email: String!
+  password: String!
+  name: String
+  firstName: String
+  lastName: String
+}
+input EmailPasswordLogInData {
+  email: String!
+  password: String!
+}
+type EmailPasswordSignUpResponse {
+  message: String
+}
+type EmailPasswordLogInResponseData {
+  token: String
+  refreshToken: String
+  user: User
+}
+type EmailPasswordLogInResponse {
+  message: String
+  data: EmailPasswordLogInResponseData
+}
+input RefreshTokenInput {
+  refreshToken: String!
+}
+type RefreshTokenRes {
+  token: String
+  user: User
+}
+input EmailPasswordForgotPasswordData {
+  email: String!
+}
+input EmailPasswordVerifyResetTokenData {
+  token: String!
+}
+input EmailPasswordResetPasswordData {
+  token: String!
+  newPassword: String!
+}
+input collectionInputData {
+  id: ID
+  tmdbId: Int!
+  name: String!
+  overview: String!
+  posterData: imageData
+  backdropData: imageData
+}
+input collectionDataToUpdate {
+  name: String
+  overview: String
+  posterData: imageUpdateData
+  backdropData: imageUpdateData
+  moviesToAdd: [ID!]
+  moviesToRemove: [ID!]
+}
+type CreateCollectionResponse {
+  collection: collectionData
+  message: String!
+}
+type UpdateDeleteCollectionResponse {
+  message: String!
+}
+type collectionData {
+  id: ID
+  tmdbId: Int
+  name: String
+  overview: String
+  posterPath: String
+  backdropPath: String
+}
+input imageData {
+  aspectRatio: Float!
+  filePath: String!
+  height: Int!
+  width: Int!
+  languageCode: String!
+}
+input imageUpdateData {
+  aspectRatio: Float
+  filePath: String
+  height: Int
+  width: Int
+  languageCode: String
+}
+type GetCollectionResponse {
+  id: ID
+  tmdbId: Int
+  name: String
+  overview: String
+  posterPath: String
+  backdropPath: String
+  parts: [movieData]
+}
+type movieData {
+  id: ID
+  adult: Boolean
+  budget: Int
+  homePage: String
+  originalLanguage: String
+  originalTitle: String
+  overview: String
+  popularity: Float
+  releaseDate: String
+  revenue: Int
+  runtime: Int
+  status: String
+  tagline: String
+  title: String
+  video: Boolean
+  voteAverage: Float
+  voteCount: Int
+  posterPath: [ID]
+  backdropPath: [ID]
+  genreIds: [ID]
+}
+scalar DateTime
+scalar JSON
+type CommonMessageResponse {
+  message: String
+}
+enum SortOrder {
+  ASC
+  DESC
+}
+enum RecommendedCategry {
+  MOVIE
+  TV
+}
+type RecommandedResponse {
+  count: Int
+  data: JSON
+}
+input CountriesFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+}
+input LanguagesFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+}
+type Country {
+  id: ID
+  countryCode: String
+  englishName: String
+}
+type CountriesResponse {
+  data: [Country]
+  count: Int
+}
+type Language {
+  id: ID
+  languageCode: String
+  englishName: String
+}
+type LanguagesResponse {
+  data: [Language]
+  count: Int
+}
+type Credits {
+  id: ID
+  tmdbId: String
+  mediaId: String
+  mediaType: MediaType
+  creditType: CreditType
+  department: String
+  job: String
+  character: String
+  characterAdult: Boolean
+  characterGender: CharacterGender
+  order: Int
+  person: Person
+}
+type getCastCrewResponse {
+  count: Int
+  data: [Credits]
+}
+type getPersonMovieResponse {
+  count: Int
+  data: [Movie]
+}
+enum MediaType {
+  MOVIE
+  TV
+  EPISODE
+  SEASON
+}
+enum CreditType {
+  CAST
+  CREW
+  GUEST_STAR
+}
+enum CharacterGender {
+  FEMALE
+  MALE
+  OTHER
+}
+input ListCreditMovieFilter {
+  skip: Int
+  limit: Int
+  sortBy: String
+}
+type Episode {
+  id: ID
+  tmdbId: ID
+  seasonId: Int
+  tvId: ID
+  airDate: DateTime
+  episodeNumber: Int
+  name: String
+  overview: String
+  productionCode: String
+  stillPath: String
+  voteAverage: String
+  voteCount: Int
+}
+input CreateEpisodeInput {
+  episodes: [EpisodeInput]
+}
+input UpdteEpisodeInput {
+  airDate: DateTime
+  name: String
+  overview: String
+  seasonNumber: Int
+}
+type CreateTvEpisodeResponse {
+  message: String
+  data: [Episode]
+}
+type DeleteEpisodeResponse {
+  message: String
+  data: Tv
+}
+type UpdateTvEpisodeResponse {
+  message: String
+  data: Episode
+}
+input favoriteMovieInput {
+  reference: Reference
+  referenceId: String
+}
+type Favorite {
+  id: ID
+  accountId: String
+  reference: Reference
+  referenceId: String
+  movie: Movie
+  tv: Tv
+}
+type favoriteMovieResponse {
+  favorite: [Favorite]
+  message: String!
+}
+enum Reference {
+  MOVIE
+  TV
+}
+type deleteFavoriteMovieResponse {
+  message: String
+}
+type CreateUpdateGenreResponse {
+  genre: genreData
+  message: String
+}
+type genreData {
+  id: ID
+  name: String
+}
+scalar Date
+enum MoviesCategory {
+  LATEST
+  PLAYING_IN_THEATERS
+  POPULAR
+  TOP_RATED
+  UPCOMING
+}
+type CastAndCrew {
+  id: ID
+  name: String
+  creditType: String
+  department: String
+  job: String
+  character: String
+  characterAdult: Boolean
+  characterGender: String
+  order: Int
+  tmdbId: ID
+  birthday: DateTime
+  knownForDepartment: String
+  deathday: DateTime
+  alsoKnownAs: String
+  gender: String
+  biography: String
+  popularity: Float
+  placeOfBirth: String
+  profilePath: String
+  homePage: String
+  adult: Boolean
+  createdAt: DateTime
+  updatedAt: DateTime
+  deletedAt: DateTime
+}
+type Video {
+  id: ID
+  mediaId: ID
+  mediaType: MediaType
+  languageCode: String
+  countryCode: String
+  site: String
+  size: Int
+  official: Boolean
+  publishedAt: DateTime
+}
+type Movie {
+  id: ID
+  adult: Boolean
+  budget: Int
+  homePage: String
+  streamingOn: String
+  originalLanguage: String
+  originalTitle: String
+  overview: String
+  popularity: Float
+  releaseDate: Date
+  revenue: Int
+  runtime: Int
+  status: String
+  tagline: String
+  title: String
+  video: Boolean
+  voteAverage: Float
+  voteCount: Int
+  createdAt: DateTime
+  castAndCrew: [CastAndCrew]
+  genres: [Genre]
+  movieVideo: [Video]
+  movieImages: [Images]
+  movieCollection: [collectionData]
+  languages: [Language]
+  countries: [Country]
+  imageUrl: String
+}
+input MovieInput {
+  adult: Boolean!
+  budget: Int!
+  originalLanguage: String!
+  originalTitle: String!
+  title: String!
+  overview: String!
+  releaseDate: Date!
+  revenue: Int!
+  runtime: Int!
+  status: String!
+  tagline: String!
+  countryIds: [String!]
+  languageIds: [String!]
+  companies: [ProductionCompanyInput]
+  genres: [GenreInput]
+  collections: [collectionInputData]
+  credits: [CreditInput]
+}
+input UpdateMovieInput {
+  adult: Boolean!
+  budget: Int!
+  originalLanguage: String!
+  originalTitle: String!
+  title: String!
+  overview: String!
+  releaseDate: Date!
+  revenue: Int!
+  runtime: Int!
+  status: String!
+  tagline: String!
+  countryIds: [String!]
+  languageIds: [String!]
+  companies: [ProductionCompanyInput]
+  genres: [GenreInput]
+  collections: [collectionInputData]
+  credits: [CreditInput]
+  imageUrl: String
+}
+enum MovieCreditType {
+  CAST
+  CREW
+}
+input CreditInput {
+  id: ID
+  creditType: MovieCreditType
+  department: String
+  job: String
+  character: String
+  characterAdult: Boolean
+  characterGender: CharacterGender
+  person: CreditPersonInput!
+}
+input CreditPersonInput {
+  id: ID
+  tmdbId: String
+  birthday: DateTime
+  knownForDepartment: String
+  deathday: String
+  name: String
+  alsoKnownAs: [String]
+  gender: Int
+  biography: String
+  popularity: Float
+  placeOfBirth: String
+  profilePath: String
+  homePage: String
+  adult: Boolean
+}
+input GenreInput {
+  id: ID
+  name: String
+}
+input ListMoviesFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+  category: MoviesCategory
+}
+input MoviesFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+  category: MoviesCategory
+}
+enum ListMoviesSortFields {
+  createdAt
+  updatedAt
+  releaseDate
+  popularity
+  voteAverage
+}
+input ListMoviesSort {
+  field: ListMoviesSortFields
+  order: SortOrder
+}
+input MoviesSignedPutUrlDataInput {
+  fileName: String!
+  movieId: String
+}
+type SignedUrlType {
+  signedUrl: String
+  key: String
+}
+type Data {
+  movie: Movie
+  companies: [String]
+  genres: [String]
+  credits: [String]
+  backdropData: String
+  posterData: String
+  collections: [String]
+  countries: [String]
+  languages: [String]
+}
+type MovieSuccessResponse {
+  message: String
+  data: Data
+}
+type MovieSuccessResponseList {
+  message: String
+  count: Int
+  data: [Movie]
+}
+type MoviesResponseList {
+  message: String
+  count: Int
+  data: [Movie]
+}
+type MovieResponse {
+  message: String
+  data: Movie
+}
+enum PersonCategory {
+  WHATS_POPULAR
+  TRENDING
+}
+type Person {
+  id: ID
+  tmdbId: String
+  birthday: DateTime
+  knownForDepartment: String
+  deathday: DateTime
+  name: String
+  alsoKnownAs: [String]
+  gender: GenderType
+  biography: String
+  popularity: Float
+  placeOfBirth: String
+  profilePath: String
+  homePage: String
+  adult: Boolean
+}
+type Images {
+  id: ID!
+  mediaId: ID!
+  personId: ID!
+  collectionId: ID!
+  mediaType: MediaType!
+  aspectRatio: Float!
+  filePath: String!
+  height: Int!
+  voteAverage: Float!
+  voteCount: Int!
+  width: Int!
+  languageCode: String!
+  imageType: ImageType
+}
+enum GenderType {
+  MALE
+  FEMALE
+  OTHER
+}
+enum ImageType {
+  POSTER
+  BACKDROPS
+  PROFILES
+}
+input ListPersonsFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+  category: PersonCategory
+}
+enum ListPersonsSortFields {
+  createdAt
+  updatedAt
+  name
+}
+input ListPersonsSort {
+  field: ListPersonsSortFields
+  order: SortOrder
+}
+type deletePersonResponse {
+  message: String
+}
+input PersonInput {
+  tmdbId: String
+  birthday: DateTime
+  knownForDepartment: String
+  deathday: DateTime
+  name: String!
+  alsoKnownAs: [String]
+  gender: GenderType
+  biography: String
+  popularity: Float
+  placeOfBirth: String
+  profilePath: String
+  homePage: String
+  adult: Boolean
+}
+input UpdatePersonInput {
+  tmdbId: String
+  birthday: DateTime
+  knownForDepartment: String
+  deathday: DateTime
+  name: String
+  alsoKnownAs: [String]
+  gender: GenderType
+  biography: String
+  popularity: Float
+  placeOfBirth: String
+  profilePath: String
+  homePage: String
+  adult: Boolean
+}
+type PersonsResponseList {
+  message: String
+  count: Int
+  data: [Person]
+}
+type CreatePersonResponse {
+  message: String
+  data: Person
+}
+type PersonResponse {
+  message: String
+  data: Person
+}
+type ProductionCompany {
+  id: ID
+  description: String
+  headquarters: String
+  homepage: String
+  logoPath: String
+  name: String
+  originCountry: String
+  parentCompany: String
+}
+input ProductionCompanyInput {
+  id: ID
+  description: String!
+  headquarters: String!
+  homepage: String!
+  logoPath: String!
+  name: String!
+  originCountry: String!
+  parentCompany: String!
+}
+input DataToUpdate {
+  description: String
+  headquarters: String
+  homepage: String
+  logoPath: String
+  name: String
+  originCountry: String
+  parentCompany: String
+}
+type ProductionCompanyResponse {
+  message: String!
+  data: ProductionCompany!
+}
+type ListProductionCompanyResponse {
+  message: String!
+  count: Int!
+  data: [ProductionCompany!]
+}
+input MovieRatingInput {
+  reference: Reference
+  rate: Float
+  referenceId: String
+}
+type Rating {
+  accountId: String
+  reference: Reference
+  rate: Float
+  referenceId: String
+  movie: Movie
+  tv: Tv
+}
+type movieRatingResponse {
+  rating: Rating
+  message: String!
+}
+type deleteMovieRatingResponse {
+  message: String
+}
+type Season {
+  id: ID
+  tmdbId: ID
+  tvId: ID
+  airDate: DateTime
+  name: String
+  overview: String
+  seasonNumber: Int
+  seasonEpisode: [Episode]
+}
+input CreateSeasonInput {
+  seasons: [SeasonInput]
+}
+input UpdteSeasonInput {
+  airDate: DateTime
+  name: String
+  overview: String
+  seasonNumber: Int
+}
+type CreateTvSeasonResponse {
+  message: String
+  data: [Season]
+}
+type DeleteSeasonResponse {
+  message: String
+  data: Tv
+}
+type UpdateTvSeasonResponse {
+  message: String
+  data: Season
+}
+enum TvSeriesCategory {
+  AIRING_TODAY
+  WHATS_POPULAR
+  TRENDING
+  TOP_RATED
+}
+type Tv {
+  id: ID
+  tmdbId: ID
+  name: String
+  episodeRunTime: Float
+  firstAirDate: DateTime
+  inProduction: Boolean
+  lastAirDate: DateTime
+  numberOfEpisodes: Int
+  numberOfSeasons: Int
+  originCountry: [String]
+  originalName: String
+  overview: String
+  popularity: Float
+  status: String
+  tagline: String
+  type: String
+  voteAverage: Float
+  voteCount: Int
+  createdAt: DateTime
+  castAndCrew: [CastAndCrew]
+  genres: [Genre]
+  seasonCount: Int
+  languages: [Language]
+  tvSeason: [Season]
+}
+type Genre {
+  id: ID
+  name: String
+}
+input ListTvsFilter {
+  skip: Int
+  limit: Int
+  searchTerm: String
+  category: TvSeriesCategory
+}
+enum ListTvsSortFields {
+  createdAt
+  updatedAt
+  name
+}
+input ListTvsSort {
+  field: ListTvsSortFields
+  order: SortOrder
+}
+type TvsResponseList {
+  message: String
+  count: Int
+  data: [Tv]
+}
+type CreateTvResponse {
+  message: String
+  data: Tv
+}
+type DeleteTvResponse {
+  message: String
+  data: Tv
+}
+input TvInput {
+  tmdbId: ID
+  name: String!
+  episodeRunTime: Float!
+  firstAirDate: DateTime!
+  inProduction: Boolean!
+  lastAirDate: DateTime!
+  numberOfEpisodes: Int!
+  numberOfSeasons: Int!
+  originCountry: [String]!
+  originalName: String!
+  overview: String
+  popularity: Float
+  status: String
+  tagline: String
+  type: String
+  voteAverage: Float
+  voteCount: Int
+  createdAt: DateTime
+  countryIds: [String!]
+  languageIds: [String!]
+  companies: [ProductionCompanyInput]
+  genres: [GenreInput]
+  seasons: [SeasonInput]
+  credits: [CreditInput]
+}
+input TvUpdateInput {
+  name: String
+  episodeRunTime: Float
+  firstAirDate: DateTime
+  inProduction: Boolean
+  lastAirDate: DateTime
+  numberOfEpisodes: Int
+  numberOfSeasons: Int
+  originCountry: [String]
+  originalName: String!
+  overview: String
+  popularity: Float
+  status: String
+  tagline: String
+  type: String
+  voteAverage: Float
+  voteCount: Int
+  createdAt: DateTime
+  countryIds: [String!]
+  languageIds: [String!]
+  companies: [ProductionCompanyInput]
+  genres: [GenreInput]
+  seasons: [SeasonInput]
+  credits: [CreditInput]
+}
+input SeasonInput {
+  seasonId: ID
+  tmdbId: ID
+  airDate: DateTime
+  name: String
+  overview: String
+  seasonNumber: Int
+  seasonEpisodes: [EpisodeInput]
+  credits: [CreditInput]
+}
+input EpisodeInput {
+  episodeId: ID
+  tmdbId: ID
+  airDate: DateTime
+  episodeNumber: Int
+  name: String
+  overview: String
+  productionCode: String
+  stillPath: String
+  voteAverage: String
+  voteCount: Int
+  credits: [CreditInput]
+}
+input watchListMovieInput {
+  reference: Reference
+  referenceId: String
+}
+type WatchList {
+  id: ID
+  accountId: String
+  reference: Reference
+  referenceId: String
+  movie: Movie
+  tv: Tv
+}
+type watchListMovieResponse {
+  watchList: WatchList
+  message: String!
+}
+type deleteWatchListMovieResponse {
+  message: String
+}
