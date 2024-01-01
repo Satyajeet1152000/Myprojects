@@ -1,0 +1,15 @@
+{
+  "name": "scheduler-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-schedule": "^2.1.1",
+    "nodemon": "^2.0.22"
+  }
+}

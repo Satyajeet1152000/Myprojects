@@ -1,0 +1,48 @@
+{
+  "name": "graphqlexam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.5.0",
+    "@graphql-tools/merge": "^8.4.0",
+    "@graphql-tools/schema": "^9.0.17",
+    "@graphql-tools/utils": "^9.2.1",
+    "apollo-server": "^3.12.0",
+    "bcrypt": "^5.1.0",
+    "bull": "^4.10.4",
+    "dotenv": "^16.0.3",
+    "glob": "^9.3.2",
+    "graphql": "^16.6.0",
+    "graphql-depth-limit": "^1.1.0",
+    "graphql-query-complexity": "^0.12.0",
+    "graphql-query-cost": "^1.0.1",
+    "graphql-rate-limit": "^3.3.0",
+    "graphql-rate-limit-directive": "^2.0.3",
+    "graphql-tag": "^2.12.6",
+    "graphql-tools": "^8.3.19",
+    "graphql-validation-complexity": "^0.4.2",
+    "ioredis": "^5.3.1",
+    "jsonwebtoken": "^9.0.0",
+    "mysql2": "^3.2.0",
+    "pg": "^8.10.0",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.29.3",
+    "sequelize-cli": "^6.6.0",
+    "uuid": "^9.0.0",
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.36.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "graphpack": "^0.0.0",
+    "nodemon": "^2.0.21"
+  }
+}

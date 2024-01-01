@@ -1,0 +1,3 @@
+schema defines the structure of our API
+
+resolvers define where the data comes from.
